@@ -1,0 +1,698 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #DDDDDD;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    transition: .5s width;
+    position: relative;
+}
+@media screen and (min-width: 1920px) {
+    .container{
+        width: 1522px;
+    }
+}
+@media screen and (max-width: 1580px) {
+    .container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .container{
+        width: 95%;
+    }
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+	margin: 0 auto;
+}
+
+.send-button{
+    background-color: #535353;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.send-button:hover{
+    background-color: white;
+    color: #535353;
+}
+
+.progress{
+    position: fixed;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 3px;
+    background: #DDDDDD;
+    width: 0%;
+  }
+/*-- LABEL --*/
+.label{
+    position: relative;
+    height: 600px;
+    background-image: url("../img/yacht-logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.label-main{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.label-main > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+@media only screen and (max-width: 700px){
+    .label-main > h1{
+        font-size: 55px;
+    }
+}
+
+.label-contact{
+    position: relative;
+    height: 600px;
+    background-image: url("../img/contact.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.label-main-contact{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.label-main-contact > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+@media only screen and (max-width: 700px){
+    .label-main-contact > h1{
+        font-size: 55px;
+    }
+}
+
+.label-realizations{
+    position: relative;
+    height: 600px;
+    background-image: url("../img/realizations.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.label-main-realizations{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.label-main-realizations > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+@media only screen and (max-width: 700px){
+    .label-main-realizations > h1{
+        font-size: 55px;
+    }
+}
+
+.label-realizations{
+    position: relative;
+    height: 600px;
+    background-image: url("../img/realizations.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.label-main-realizations{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.label-main-realizations > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+@media only screen and (max-width: 700px){
+    .label-main-realizations > h1{
+        font-size: 55px;
+    }
+}
+
+.label-offer{
+    position: relative;
+    height: 600px;
+    background-image: url("../img/offer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.label-main-offer{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.label-main-offer > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+@media only screen and (max-width: 700px){
+    .label-main-offer > h1{
+        font-size: 55px;
+    }
+}
+
+/*------ STRONA ------*/
+
+/* -- NAVBAR -- */
+
+.navbar{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    line-height: 50px;
+    z-index: 100;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+.nav-buttons{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .1s;
+}
+
+.link:hover{
+    border-bottom: 3px white solid;
+}
+
+/* NAVBAR MOBILE */
+@media (max-width: 768px)
+{
+.navbar{
+        display: none;
+    }
+
+.nav-mobile {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    row-gap: 40px;
+    transform: translateY(-100vh);
+    transition: .5s;
+}
+
+.nav-mobile--active{
+    transform: translateY(0);
+}
+
+.burger{
+    height: 50px;
+    width: 40px;
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 3;
+}
+
+.bar1{
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: .5s;
+}
+
+.bar1::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(-10px);
+    transition: .5s;
+}
+
+.bar1::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(10px);
+    transition: .5s;
+}
+
+.bar1--active{
+    background-color: transparent;
+}
+
+.burger--active .bar1::before{
+    transform: rotate(-45deg);
+}
+
+.burger--active .bar1::after{
+    transform: rotate(45deg);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+}
+
+/*-- HEADER --*/
+
+.header{
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    background-image: url("../img/yacht-logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.header-main{
+    max-width: 560px;
+    width: 100%;
+    border: 2px solid #fff;
+    margin: auto auto;
+    text-align: center;
+    padding: 20px;
+}
+.header-main > h1{
+    font-family: 'Charmonman', cursive;
+    font-size: 80px;
+    color: #fff;
+    margin: 0;
+}
+.header-main > h3{
+    font-family: 'Charmonman', cursive;
+    font-size: 32px;
+    color: #fff;
+    margin: 5px 0 0;
+}
+@media only screen and (max-width: 700px){
+    .header-main > h1{
+        font-size: 55px;
+    }
+    .header-main > h3{
+        font-size: 22px;
+    }
+}
+
+/*-- ABOUT --*/
+
+.about{
+    padding: 100px 0;
+}
+.about-main{
+    /* max-width: 650px; */
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+.about .text{
+    width: 100%;
+    padding: 0;
+}
+.about-image{
+    width: 550px;
+    height: 450px;
+    margin: 50px auto 0;
+}
+
+@media only screen and (max-width: 700px){
+    .about-image{
+        width: 300px;
+        height: 200px;
+        margin: 50px auto 0;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .about-image{
+        width: 280px;
+        height: 180px;
+        margin: 50px auto 0;
+    }
+}
+
+.about-image > img{
+    width: 100%;
+    height: 100%;
+}
+
+.about-main > .wrapper{
+    flex-direction: column;
+}
+
+.about .text > p{
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 700px){
+    .about .text > p{
+        font-size: 20px;
+        overflow: hidden;
+}
+}
+
+/*-- REALIZATIONS --*/
+
+.realizations{
+    padding: 100px 0;
+}
+.realizations-main{
+    /* max-width: 650px; */
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+.realizations .text{
+    width: 100%;
+    padding: 0;
+}
+.realizations-image{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 0;
+    flex-wrap: wrap;
+}
+.realizations-image > img{
+    width: 400px;
+    height: 300px;
+}
+
+@media only screen and (max-width: 700px){
+    .realizations-image > img{
+        width: 300px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .realizations-image > img{
+        width: 280px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+}
+
+.realizations-main > .wrapper{
+    flex-direction: column;
+}
+
+.realizations .text > p{
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 700px){
+        .realizations .text > p{
+            font-size: 20px;
+    }
+}
+
+/*-- OFFER --*/
+.offer{
+    padding: 50px 0;
+}
+.offer-main{
+    /* max-width: 650px; */
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.offer-main > .wrapper{
+    flex-direction: column;
+}
+
+.offer .text > p{
+    font-size: 25px;
+}
+
+
+
+@media only screen and (max-width: 700px){
+        .offer .text > p{
+            font-size: 20px;
+    }
+}
+
+.offer-table{
+    background-color:#B4B4B4;
+    border: 2px solid black;
+    border-spacing: 0px;
+    margin: 50px 0;
+}
+
+.offer-table td{
+    border: 1px solid black;
+}
+
+.offer-table .td-bold{
+    font-weight: bold;
+}
+
+/*-- CONTACT --*/
+.contact{
+    padding: 50px 0;
+}
+
+.contact{
+    /* max-width: 650px; */
+    width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    flex-direction: colum;
+}
+
+.contact .wrapper{
+    flex-wrap: wrap;
+}
+
+.contact h3{
+    margin-bottom: 5px;
+}
+
+.contact #id{
+    height: 10px;
+    width: 500px;
+}
+
+.contact #mail{
+    height: 200px;
+    width: 500px;
+    resize: none;
+}
+
+.contact button{
+    display: block;
+}
+
+.contact .contact-text{
+    margin-left: 80px;
+}
+
+@media only screen and (max-width: 700px){
+    .contact #id{
+        width: 300px;
+    }
+
+    .contact #mail{
+        width: 300px;
+        height: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 300px){
+    .contact #id{
+        width: 280px;
+    }
+
+    .contact #mail{
+        width: 280px;
+        height: 80px;
+    }
+}
+
+/*-- FOOTER --*/
+.footer{
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    color: grey;
+}
+
+/*-- GRID --*/
+.picture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 300px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 24px;
+  }
+
+@media only screen and (max-width: 1000px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: 250px;
+        gap: 24px;
+      }
+}
+
+@media only screen and (max-width: 900px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: 200px;
+        gap: 18px;
+      }
+}
+
+@media only screen and (max-width: 700px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: 150px;
+        gap: 12px;
+      }
+}
+
+@media only screen and (max-width: 560px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 130px);
+        grid-template-rows: 130px;
+        gap: 6px;
+      }
+}
+
+@media only screen and (max-width: 450px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: 100px;
+        gap: 5px;
+      }
+}
+
+@media only screen and (max-width: 350px){
+    .picture-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: 80px;
+        gap: 3px;
+      }
+}
+
+.pic1 { 
+    background-image: url(../img/grid-pic1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   }
+    
+.pic2 { 
+    background-image: url(../img/grid-pic2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   }
+    
+.pic3 { 
+    background-image: url(../img/grid-pic3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   }
+  
